@@ -1,0 +1,261 @@
+{
+	"info": {
+		"_postman_id": "bfdbc7c2-7e3d-4a41-8c3e-b51c474b8547",
+		"name": "Apollo",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "GET Clusters",
+			"request": {
+				"auth": {
+					"type": "apikey"
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "10fde7dd90c97f73b47f13a75e572a1062386486",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://10.240.203.18:8070/openapi/v1/apps/PIT/envclusters",
+					"protocol": "http",
+					"host": [
+						"10",
+						"240",
+						"203",
+						"18"
+					],
+					"port": "8070",
+					"path": [
+						"openapi",
+						"v1",
+						"apps",
+						"PIT",
+						"envclusters"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Namespces",
+			"request": {
+				"auth": {
+					"type": "apikey"
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "10fde7dd90c97f73b47f13a75e572a1062386486",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://10.240.203.18:8070/openapi/v1/envs/DEV/apps/PIT/clusters/TDC/namespaces",
+					"protocol": "http",
+					"host": [
+						"10",
+						"240",
+						"203",
+						"18"
+					],
+					"port": "8070",
+					"path": [
+						"openapi",
+						"v1",
+						"envs",
+						"DEV",
+						"apps",
+						"PIT",
+						"clusters",
+						"TDC",
+						"namespaces"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET Namespces - config",
+			"request": {
+				"auth": {
+					"type": "apikey"
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "c80d62c2b9c857e0567654b106d622bd90ebeb9c",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://10.240.203.18:8070/openapi/v1/envs/DEV/apps/PIT-Purley/clusters/Purley/namespaces/config_test.json",
+					"protocol": "http",
+					"host": [
+						"10",
+						"240",
+						"203",
+						"18"
+					],
+					"port": "8070",
+					"path": [
+						"openapi",
+						"v1",
+						"envs",
+						"DEV",
+						"apps",
+						"PIT-Purley",
+						"clusters",
+						"Purley",
+						"namespaces",
+						"config_test.json"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PUT Namespces - config",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "21c6e82e-88bc-4cf9-b715-872ef84a1f34",
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "apikey"
+				},
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "c80d62c2b9c857e0567654b106d622bd90ebeb9c",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"key\": \"content\",\r\n    \"value\": \"{\\n    \\\"apollo_deploy\\\": \\\"20191212_Heid999\\\",\\n    \\\"pittest\\\": \\\"heiditest999\\\"\\n}\",\r\n    \"dataChangeLastModifiedBy\": \"apollo\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://10.240.203.18:8070/openapi/v1/envs/DEV/apps/PIT-Purley/clusters/Purley/namespaces/config_test.json/items/content",
+					"protocol": "http",
+					"host": [
+						"10",
+						"240",
+						"203",
+						"18"
+					],
+					"port": "8070",
+					"path": [
+						"openapi",
+						"v1",
+						"envs",
+						"DEV",
+						"apps",
+						"PIT-Purley",
+						"clusters",
+						"Purley",
+						"namespaces",
+						"config_test.json",
+						"items",
+						"content"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET Namespces - config",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "21c6e82e-88bc-4cf9-b715-872ef84a1f34",
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "apikey"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "c80d62c2b9c857e0567654b106d622bd90ebeb9c",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"releaseTitle\":\"2019-12-11 Test RESTAPI\",\r\n    \"releaseComment\":\"Test RESTAPI by Heidi\",\r\n    \"releasedBy\":\"apollo\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://10.240.203.18:8070/openapi/v1/envs/DEV/apps/PIT-Purley/clusters/Purley/namespaces/config_test.json/releases",
+					"protocol": "http",
+					"host": [
+						"10",
+						"240",
+						"203",
+						"18"
+					],
+					"port": "8070",
+					"path": [
+						"openapi",
+						"v1",
+						"envs",
+						"DEV",
+						"apps",
+						"PIT-Purley",
+						"clusters",
+						"Purley",
+						"namespaces",
+						"config_test.json",
+						"releases"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
